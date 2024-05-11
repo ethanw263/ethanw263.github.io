@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="styles.css">
     <script src = "index.js"></script>
     <script src = "https://kit.fontawesome.com/c8e4d183c2.js" crossorigin = "anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/TagCloud@2.2.0/dist/TagCloud.min.js"> </script>
     <script type="text/javascript"
         src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
     </script>
@@ -24,7 +25,7 @@
     <section id ="landing" onmousemove="moveBackground(event)">
         <nav>
             <figure>
-                <img id="personal-logo" src="./assets/logo.svg" alt="">
+                <img id="personal-logo" src="./assets/Screen_Shot_2024-05-10_at_5.52.42_PM-removebg-preview.png" alt="">
             </figure>
             <ul class="nav__link--list">
                 <li class="nav__link" onclick="toggleModal()">
@@ -41,7 +42,7 @@
                     link__hover-effect--black
                     ">Projects</a>
                 </li>
-                <li class="nav__link" onclick="toggleModal()"">
+                <li class="nav__link" onclick="toggleModal()">
                     <a href="#" class="
                     nav__link--anchor
                     link__hover-effect
@@ -57,6 +58,7 @@
                 </li>
             </ul>
         </nav>
+    
         <header class="header">
             <div class="header__content">
                 <h1 class="title">Hey</h1>
@@ -70,14 +72,47 @@
                     <a href="https://www.linkedin.com/in/ethan-wilson263/" target="_blank" class="social__link click">
                         <i class="fab fa-linkedin-in"></i>
                     </a>
-                    <a href="" class="social__link click">
+                    <a href="https://github.com/ethanw263" target="_blank" class="social__link click">
                         <i class="fab fa-github"></i>
                     </a>
-                    <a href="./assets/David Bragg Resume.pdf" target="_blank" class="social__link click">
+                    <a href="./assets/Ethan Wilson - Resume.pdf" target="_blank" class="social__link click">
                         <i class="fas fa-file-pdf"></i>
                     </a>
                 </div>
             </div>
+            <span class="Sphere">
+                <script>
+                    const Texts = [
+                        'HTML', 'CSS', 'JAVASCRIPT',
+                        'SWIFT', 'SQL', 'REACT',
+                        'PYTHON', 'MATLAB',
+                        'JAVA', 'LINUX', 'TYPESCRIPT',
+                        'FIREBASE', 'KUBERNETES', 'GITHUB', 'NEXTJS'
+                    ];
+            
+                    var tagCloud = TagCloud('.Sphere', Texts, {
+            
+                        // Sphere radius in px
+                        radius: 180,
+            
+                        // animation speed
+                        // slow, normal, fast
+                        maxSpeed: 'fast',
+                        initSpeed: 'normal',
+            
+                        // Rolling direction [0 (top) , 90 (left), 135 (right-bottom)] 
+                        direction: 135,
+            
+                        // interaction with mouse or not [Default true (decelerate to rolling init speed, and keep rolling with mouse).]
+                        keep: true
+            
+                    });
+            
+                    // Giving color to each text in sphere
+                    var color = '#FF5733 ';
+                    document.querySelector('.Sphere').style.color = color;
+                </script>
+            </span>
         </header>
         <a href="#">
             <button class="mail__btn click" onclick="toggleModal()">
@@ -90,11 +125,11 @@
         <div class="modal">
             <div class="modal__half modal__about">
                 <h3 class="modal__title modal__title--about">Here's a bit about me.</h3>
-                <h4 class="modal__subtitle modal__subtitle--about">Frontend Software Engineer</h4>
+                <h4 class="modal__subtitle modal__subtitle--about">Software Engineer</h4>
                 <p class="modal__para">
-                    I'm a 23 year old <b class="orange">frontend software engineer</b> with a strong passoin for developing websites with great user experiences.
+                    I'm a 23 year old <b class="orange"> software engineer</b> with a strong passion for frontend engineering projects and solving complex tech-related challenges.
                     <br>
-                    I currently work on extremely difficult engineering problems and learn from a team consisting of some of the most talented and experienced software engineers every day.
+                    I currently work on difficult engineering problems using my background in <b class="orange">Applied Mathematics</b> and I am always excited to learn more. 
                 </p>
                 <div class="modal__languages">
                     <figure class = "modal__language">
@@ -102,16 +137,16 @@
                         <span class="language__name">HTML</span>
                     </figure> 
                     <figure class = "modal__language">
-                        <img class="modal__language--img" src="./assets/HTML_Icon.png" alt="">
-                        <span class="language__name">HTML</span>
+                        <img class="modal__language--img--css" src="./assets/1200px-Devicon-css3-plain.svg.png" alt="">
+                        <span class="language__name">CSS</span>
                     </figure>
                     <figure class = "modal__language">
-                        <img class="modal__language--img" src="./assets/HTML_Icon.png" alt="">
-                        <span class="language__name">HTML</span>
+                        <img class="modal__language--img--js" src="./assets/javascript-logo-javascript-icon-transparent-free-png.webp" alt="">
+                        <span class="language__name">JavaScript</span>
                     </figure>
                     <figure class = "modal__language">
-                        <img class="modal__language--img" src="./assets/HTML_Icon.png" alt="">
-                        <span class="language__name">HTML</span>
+                        <img class="modal__language--img--ts" src="./assets/Typescript_logo_2020.svg.png" alt="">
+                        <span class="language__name">TypeScript</span>
                     </figure>
                 </div>
             </div>
@@ -146,6 +181,7 @@
                 </div>
             </div>
         </div>
+        <!--
         <img src="./assets/semi circle.svg" class="shape shape--0" alt="">
         <img src="./assets/circle.svg" class="shape shape--1" alt="">
         <img src="./assets/squiggly.svg" class="shape shape--2" alt="">
@@ -155,49 +191,223 @@
         <img src="./assets/squiggly.svg" class="shape shape--6" alt="">
         <img src="./assets/circle.svg" class="shape shape--7" alt="">
         <img src="./assets/semi circle.svg" class="shape shape--8" alt="">
+        -->
     </section>
 
     <section id="projects">
         <div class="container">
             <div class="row">
                 <h1 class="section__title">
-                    Here are some of my <span class="orange">projects</span>
+                    Here are some <span class="orange">project</span> areas I have worked in 
                 </h1>
                 <ul class="project__list">
-                    <li class="project">
-                        <div class="project__wrapper">
-                            <img class="project__img" src="./assets/blinker mockup.png" alt="">
-                            <div class="project__wrapper--bg">
-                                <div class="project__description">
-                                    <h3 class="project__description--title">Car Sales Project</h3>
-                                    <h4 class="project__description--subtitle">HTML, CSS, JavaScript, Vue, Vuex</h4>
-                                    <p class="project__description--para">
-                                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga ducimus corrupti culpa velit porro accusamus cupiditate aliquid sapiente vero numquam.
-                                    </p>
-                                    <div class="project__description--links">
-                                        <a href="#" class="project__description--link">
-                                            <i class="fab fa-github"></i>
-                                        </a>
-                                        <a href="#" class="project__description--link">
-                                            <i class="fas fa-link"></i>
-                                        </a>
+                    <li class="project click">
+                        <button class="project__btn" onclick='location.href="./projectPage.html"'>
+                            <div class="project__wrapper">
+                                <img class="project__img" src="./assets/blinker mockup.png" alt="">
+                                <div class="project__wrapper--bg">
+                                    <div class="project__description">
+                                        <h3 class="project__description--title">Frontend and Web Development</h3>
+                                        <h4 class="project__description--subtitle">HTML, CSS, JavaScript, Vue, React</h4>
+                                        <p class="project__description--para">
+                                            
+                                        </p>
+                                        <div class="project__description--links">
+                                            <a href="#" class="project__description--link">
+                                                <i class="fab fa-github"></i>
+                                            </a>
+                                            <a href="#" class="project__description--link">
+                                                <i class="fas fa-link"></i>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </button>
+                    </li>
+                    <li class="project click">
+                        <button class="project__btn" onclick='location.href="./projectPage.html"'>
+                            <div class="project__wrapper">
+                                <img class="project__img" src="./assets/data-science_hero.jpeg" alt="">
+                                <div class="project__wrapper--bg">
+                                    <div class="project__description">
+                                        <h3 class="project__description--title">Machine Learning and Data Science</h3>
+                                        <h4 class="project__description--subtitle">Python, TensorFlow, PyTorch</h4>
+                                        <p class="project__description--para">
+                                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga ducimus corrupti culpa velit porro accusamus cupiditate aliquid sapiente vero numquam.
+                                        </p>
+                                        <div class="project__description--links">
+                                            <a href="#" class="project__description--link">
+                                                <i class="fab fa-github"></i>
+                                            </a>
+                                            <a href="#" class="project__description--link">
+                                                <i class="fas fa-link"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </button>
+                    </li>
+                    <li class="project click">
+                        <button class="project__btn" onclick='location.href="./projectPage.html"'>
+                            <div class="project__wrapper">
+                                <img class="project__img" src="./assets/Mathematics2-800_x_860.jpeg" alt="">
+                                <div class="project__wrapper--bg">
+                                    <div class="project__description">
+                                        <h3 class="project__description--title">Applied Mathematics</h3>
+                                        <h4 class="project__description--subtitle">MATLab, Gurobi, R, Excel</h4>
+                                        <p class="project__description--para">
+                                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga ducimus corrupti culpa velit porro accusamus cupiditate aliquid sapiente vero numquam.
+                                        </p>
+                                        <div class="project__description--links">
+                                            <a href="#" class="project__description--link">
+                                                <i class="fab fa-github"></i>
+                                            </a>
+                                            <a href="#" class="project__description--link">
+                                                <i class="fas fa-link"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </button>
+                    </li>
+                    <li class="project click">
+                        <button class="project__btn" onclick='location.href="./projectPage.html"'>
+                            <div class="project__wrapper">
+                                <img class="project__img" src="./assets/blinker mockup.png" alt="">
+                                <div class="project__wrapper--bg">
+                                    <div class="project__description">
+                                        <h3 class="project__description--title">Internship Projects</h3>
+                                        <h4 class="project__description--subtitle">HTML, CSS, JavaScript, Vue, Vuex</h4>
+                                        <p class="project__description--para">
+                                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga ducimus corrupti culpa velit porro accusamus cupiditate aliquid sapiente vero numquam.
+                                        </p>
+                                        <div class="project__description--links">
+                                            <a href="#" class="project__description--link">
+                                                <i class="fab fa-github"></i>
+                                            </a>
+                                            <a href="#" class="project__description--link">
+                                                <i class="fas fa-link"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </button>
                     </li>
                 </ul>
             </div>
         </div>
     </section>
+
+    <section id="languages">
+        <div class="languages__container">
+          <div class="languages__row">
+            <h1 class="section__title">
+              Here are my frequently used <span class="orange">technologies</span>
+            </h1>
+            <div class="language__list">
+              <div class="language">
+                <figure class="language__img--wrapper">
+                  <img
+                    src="./assets/HTML_Icon.png"
+                    alt=""
+                    class="language__img--html"
+                  />
+                </figure>
+                <span class="language__name">HTML</span>
+              </div>
+              <div class="language">
+                <figure class="language__img--wrapper">
+                  <img
+                    src="./assets/1200px-Devicon-css3-plain.svg.png"
+                    alt=""
+                    class="language__img--css"
+                  />
+                </figure>
+                <span class="language__name">CSS</span>
+              </div>
+              <div class="language">
+                <figure class="language__img--wrapper">
+                  <img
+                    src="./assets/javascript-logo-javascript-icon-transparent-free-png.webp"
+                    alt=""
+                    class="language__img--js"
+                  />
+                </figure>
+                <span class="language__name">JavaScript</span>
+              </div>
+              <div class="language">
+                <figure class="language__img--wrapper">
+                  <img
+                    src="./assets/Typescript_logo_2020.svg.png"
+                    alt=""
+                    class="language__img--ts"
+                  />
+                </figure>
+                <span class="language__name">TypeScript</span>
+              </div>
+              <div class="language">
+                <figure class="language__img--wrapper">
+                  <img
+                    src="./assets/React.webp"
+                    alt=""
+                    class="language__img"
+                  />
+                </figure>
+                <span class="language__name">React</span>
+              </div>
+              <div class="language">
+                <figure class="language__img--wrapper">
+                  <img
+                    src="./assets/python-5-logo-png-transparent.png"
+                    alt=""
+                    class="language__img"
+                  />
+                </figure>
+                <span class="language__name">Python</span>
+              </div>
+              <div class="language">
+                <figure class="language__img--wrapper">
+                  <img
+                    src="./assets/matlab_97412.webp"
+                    alt=""
+                    class="language__img"
+                  />
+                </figure>
+                <span class="language__name">MATLAB</span>
+              </div>
+              <div class="language">
+                <figure class="language__img--wrapper">
+                  <img
+                    src="./assets/java__img.png"
+                    alt=""
+                    class="language__img"
+                  />
+                </figure>
+                <span class="language__name">Java</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
     <footer>
         <div class="container">
             <div class="row footer__row">
-                <figure>
-                    <img class = "footer__logo--img" src="./assets/logo.svg" alt="">
-                </figure>
+                <a href="#" class="footer__anchor">
+                    <figure class="footer__logo">
+                      <img src="./assets/Screen_Shot_2024-05-10_at_5.52.42_PM-removebg-preview.png" class="footer__logo--img" alt="" />
+                    </figure>
+                    <span class="footer__logo--popper">
+                      Top
+                      <i class="fas fa-arrow-up"></i>
+                    </span>
+                  </a>
                 <div class="footer__social--list">
-                    <a href="#" class="
+                    <a href="https://github.com/ethanw263" target="_blank" class="
                         footer__social--link
                         link__hover-effect
                         link__hover-effect--white
@@ -215,7 +425,7 @@
                         link__hover-effect--white
                     ">Contact
                     </a>
-                    <a href="#" class="
+                    <a href="./assets/Ethan Wilson - Resume.pdf" class="
                         footer__social--link
                         link__hover-effect
                         link__hover-effect--white

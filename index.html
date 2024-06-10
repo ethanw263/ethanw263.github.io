@@ -61,10 +61,10 @@
     
         <header class="header">
             <div class="header__content">
-                <h1 class="title">Hey</h1>
-                <h1 class="title orange">I'm Ethan</h1>
+                <h1 class="title">Ethan</h1>
+                <h1 class="title orange">Wilson</h1>
                 <p class="header__para">
-                    I'm a <b class="orange">Frontend Software Engineer</b> with a strong passion for building web applications with greater user experiences. 
+                    I'm a <b class="orange"> Software Engineer</b> with a strong passion for building web applications and working with AI and machine learning. 
                     <br>
                     Here's a bit more <b class="orange click" onclick="toggleModal()">about me.</b>
                 </p>
@@ -80,39 +80,41 @@
                     </a>
                 </div>
             </div>
-            <span class="Sphere">
-                <script>
-                    const Texts = [
-                        'HTML', 'CSS', 'JAVASCRIPT',
-                        'SWIFT', 'SQL', 'REACT',
-                        'PYTHON', 'MATLAB',
-                        'JAVA', 'LINUX', 'TYPESCRIPT',
-                        'FIREBASE', 'KUBERNETES', 'GITHUB', 'NEXTJS'
-                    ];
-            
-                    var tagCloud = TagCloud('.Sphere', Texts, {
-            
-                        // Sphere radius in px
-                        radius: 180,
-            
-                        // animation speed
-                        // slow, normal, fast
-                        maxSpeed: 'fast',
-                        initSpeed: 'normal',
-            
-                        // Rolling direction [0 (top) , 90 (left), 135 (right-bottom)] 
-                        direction: 135,
-            
-                        // interaction with mouse or not [Default true (decelerate to rolling init speed, and keep rolling with mouse).]
-                        keep: true
-            
-                    });
-            
-                    // Giving color to each text in sphere
-                    var color = '#FF5733 ';
-                    document.querySelector('.Sphere').style.color = color;
-                </script>
-            </span>
+            <div class="Sphere__wrapper">
+                <div class="Sphere">
+                    <script>
+                        const Texts = [
+                            'HTML', 'CSS', 'JAVASCRIPT',
+                            'SWIFT', 'SQL', 'REACT',
+                            'PYTHON', 'MATLAB',
+                            'JAVA', 'LINUX', 'TYPESCRIPT',
+                            'FIREBASE', 'KUBERNETES', 'GITHUB', 'NEXTJS'
+                        ];
+                
+                        var tagCloud = TagCloud('.Sphere', Texts, {
+                
+                            // Sphere radius in px
+                            radius: 200,
+                
+                            // animation speed
+                            // slow, normal, fast
+                            maxSpeed: 'fast',
+                            initSpeed: 'normal',
+                
+                            // Rolling direction [0 (top) , 90 (left), 135 (right-bottom)] 
+                            direction: 135,
+                
+                            // interaction with mouse or not [Default true (decelerate to rolling init speed, and keep rolling with mouse).]
+                            keep: true
+                
+                        });
+                
+                        // Giving color to each text in sphere
+                        var color = '#FF5733 ';
+                        document.querySelector('.Sphere').style.color = color;
+                    </script>
+                </div>
+            </div>
         </header>
         <a href="#">
             <button class="mail__btn click" onclick="toggleModal()">
@@ -202,7 +204,7 @@
                 </h1>
                 <ul class="project__list">
                     <li class="project click">
-                        <button class="project__btn" onclick='location.href="./projectPage.html"'>
+                        <button class="project__btn" onclick='location.href="./projectPage.html#Frontend-Section"'>
                             <div class="project__wrapper">
                                 <img class="project__img" src="./assets/blinker mockup.png" alt="">
                                 <div class="project__wrapper--bg">
@@ -226,7 +228,7 @@
                         </button>
                     </li>
                     <li class="project click">
-                        <button class="project__btn" onclick='location.href="./projectPage.html"'>
+                        <button class="project__btn" onclick='location.href="./projectPage.html#ML-Section"'>
                             <div class="project__wrapper">
                                 <img class="project__img" src="./assets/data-science_hero.jpeg" alt="">
                                 <div class="project__wrapper--bg">
@@ -250,15 +252,15 @@
                         </button>
                     </li>
                     <li class="project click">
-                        <button class="project__btn" onclick='location.href="./projectPage.html"'>
+                        <button class="project__btn" onclick='location.href="./projectPage.html#Internship-Section"'>
                             <div class="project__wrapper">
-                                <img class="project__img" src="./assets/Mathematics2-800_x_860.jpeg" alt="">
+                                <img class="project__img" src="./assets/Coding_BackgroundImg.jpeg" alt="">
                                 <div class="project__wrapper--bg">
                                     <div class="project__description">
-                                        <h3 class="project__description--title">Applied Mathematics</h3>
-                                        <h4 class="project__description--subtitle">MATLab, Gurobi, R, Excel</h4>
+                                        <h3 class="project__description--title">Internship and Coursework Projects</h3>
+                                        <h4 class="project__description--subtitle">HTML, CSS, JavaScript, Vue, Vuex</h4>
                                         <p class="project__description--para">
-                                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga ducimus corrupti culpa velit porro accusamus cupiditate aliquid sapiente vero numquam.
+                                            Here are some additional projects I have completed for internships and other positions. 
                                         </p>
                                         <div class="project__description--links">
                                             <a href="#" class="project__description--link">
@@ -274,13 +276,13 @@
                         </button>
                     </li>
                     <li class="project click">
-                        <button class="project__btn" onclick='location.href="./projectPage.html"'>
+                        <button class="project__btn" onclick='location.href="./projectPage.html#Math-Section"'>
                             <div class="project__wrapper">
-                                <img class="project__img" src="./assets/blinker mockup.png" alt="">
+                                <img class="project__img" src="./assets/MATLAB_BckgrndImg.png" alt="">
                                 <div class="project__wrapper--bg">
                                     <div class="project__description">
-                                        <h3 class="project__description--title">Internship Projects</h3>
-                                        <h4 class="project__description--subtitle">HTML, CSS, JavaScript, Vue, Vuex</h4>
+                                        <h3 class="project__description--title">Applied Mathematics</h3>
+                                        <h4 class="project__description--subtitle">MATLab, Gurobi, R, Excel</h4>
                                         <p class="project__description--para">
                                             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga ducimus corrupti culpa velit porro accusamus cupiditate aliquid sapiente vero numquam.
                                         </p>

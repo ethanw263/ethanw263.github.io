@@ -51,13 +51,115 @@ nav {
 }
 
 .projectPage__nav {
-    width: 100%;
-}
+    padding: 0 20px;
+    height: 84px; /* visually tighter than the global 100px */
+  }
 
 .projectPage__links--list {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.projectPage__heading {
+    padding-bottom: 18px;
+    margin-bottom: 32px;
+    background: linear-gradient(180deg, #ffe9e4 0%, #ffffff 100%); /* soft tint → white */
+}
+  
+  /* Back/Home button styling */
+.back__btn,
+.back__btn:visited {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 14px;
+    font-weight: 600;
+    font-size: 14px;
+    color: #111;
+    background: linear-gradient(180deg, #ffffff, #f3f3f3);
+    border: 1px solid rgba(0,0,0,0.12);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    transition: transform 200ms ease, box-shadow 200ms ease, background 200ms ease;
+}
+  
+.back__btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.10);
+    background: linear-gradient(180deg, #ffffff, #ececec);
+}
+  
+.back__btn:focus-visible {
+    outline: 3px solid rgba(240,100,73,0.4);
+    outline-offset: 2px;
+}
+  
+/* Nav links row */
+.projectPage__links--list {
+    gap: 22px;            /* modern spacing */
+    padding: 0 2px;       /* small breathing room */
+}
+  
+/* Individual link container */
+.project__link {
+    display: flex;
+    align-items: center;
+}
+  
+/* Link look and feel */
+.nav__link--anchor {
+    position: relative;
+    display: inline-block;
+    padding: 8px 10px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #111;
+    letter-spacing: 0.2px;
+    transition: color 180ms ease, transform 180ms ease;
+}
+  
+/* Underline hover effect */
+.nav__link--anchor::after {
+    content: "";
+    position: absolute;
+    left: 10px;
+    right: 10px;
+    bottom: 5px;
+    height: 2px;
+    border-radius: 2px;
+    background: #111;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 220ms ease;
+}
+  
+.nav__link--anchor:hover {
+    color: #000;
+    transform: translateY(-1px);
+}
+  
+.nav__link--anchor:hover::after {
+    transform: scaleX(1);
+}
+  
+/* If you keep using the link__hover-effect classes, make them harmonize */
+.link__hover-effect.link__hover-effect--black:hover {
+    text-decoration: none; /* underline handled by ::after */
+}
+  
+/* Theme toggle icon link (the <i class="fas fa-adjust"> item) */
+.project__link .fas {
+    font-size: 18px;
+    line-height: 1;
+    padding: 8px;
+    border-radius: 10px;
+    transition: background-color 180ms ease, transform 180ms ease;
+}
+  
+.project__link a:hover .fas {
+    background-color: rgba(0,0,0,0.06);
+    transform: translateY(-1px);
 }
 
 /* FRONTEND PROJECTS */
@@ -197,3 +299,43 @@ footer {
 }
 
 
+  
+  /* Compact and tidy on smaller screens */
+  @media (max-width: 768px) {
+    .projectPage__nav {
+      height: 72px;
+      padding: 0 14px;
+    }
+  
+    .projectPage__links--list {
+      gap: 12px;
+    }
+  
+    .nav__link--anchor {
+      font-size: 14px;
+      padding: 8px 6px;
+    }
+  
+    .nav__link--anchor::after {
+      left: 6px;
+      right: 6px;
+    }
+  
+    .back__btn {
+      padding: 8px 12px;
+      font-size: 13px;
+      border-radius: 10px;
+    }
+  }
+  
+  /* Extra small screens where space is tight */
+  @media (max-width: 420px) {
+    .projectPage__links--list {
+      gap: 8px;
+    }
+    .nav__link--anchor {
+      font-size: 13px;
+      padding: 6px 4px;
+    }
+  }
+  
